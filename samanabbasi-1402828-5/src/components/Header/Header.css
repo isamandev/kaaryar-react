@@ -1,0 +1,9 @@
+.header-container {
+  padding-inline: 16px;
+  padding-block: 32px;
+  text-align: end;
+  border-bottom: 3px solid #ecf0f1;
+}
+.header-container h2 {
+  font-size: 18px;
+}

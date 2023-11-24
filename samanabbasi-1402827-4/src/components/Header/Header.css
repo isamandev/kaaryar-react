@@ -1,0 +1,15 @@
+.header-titles,
+.cells-headers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+}
+.header-titles h2 {
+  width: 50%;
+  text-align: center;
+}
+.cells-headers span {
+  width: 20%;
+  text-align: center;
+}
