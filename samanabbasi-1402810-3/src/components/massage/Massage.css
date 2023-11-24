@@ -1,0 +1,27 @@
+.massage-container {
+  display: flex;
+  width: 100%;
+  color: white;
+}
+.massage-container.start {
+  justify-content: start;
+}
+.massage-container.end {
+  justify-content: end;
+}
+.massage-container {
+  display: flex;
+  width: 100%;
+}
+.blue {
+  padding: 5px;
+  border-radius: 10px 10px 10px 0px;
+  background-color: #12a3cc;
+  justify-content: end;
+}
+.red {
+  justify-content: start;
+  padding: 5px;
+  border-radius: 10px 10px 0px 10px;
+  background-color: #db0142;
+}
