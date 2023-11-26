@@ -1,10 +1,10 @@
 import './App.css';
-import OrderShell from './components/OrderShell/OrderShell';
+import Comments from './components/comments/Comments';
 
 function App() {
   return (
     <div className="App">
-      <OrderShell />
+      <Comments />
     </div>
   );
 }

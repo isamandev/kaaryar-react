@@ -1,0 +1,16 @@
+.comments-container {
+  width: 80%;
+}
+.comments-container > h1 {
+  font-size: 2rem;
+}
+.comments-container > hr {
+  height: 2px;
+  background-color: #08ffc8;
+  border: none;
+}
+@media screen and (max-width: 320px) {
+  .comments-container {
+    width: 100%;
+  }
+}
