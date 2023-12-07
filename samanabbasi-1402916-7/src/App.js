@@ -1,10 +1,12 @@
 import './App.css';
-import OrderShell from './components/OrderShell/OrderShell';
+import Bottoms from './components/bottons/Bottons';
 
 function App() {
   return (
     <div className="App">
-      <OrderShell />
+      <Bottoms looks={"Primary"} variants={"Filled"} as='a' size={"Medium"} type={"submit"} disabled={false} href={"https://google.com"} target={"blank"}>
+        Salam
+      </Bottoms>
     </div>
   );
 }
