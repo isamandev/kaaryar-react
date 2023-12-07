@@ -1,0 +1,72 @@
+a {
+  text-decoration: none;
+}
+.button {
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: "Vazirmatn", sans-serif;
+}
+.button.Primary {
+  background-color: #696cff;
+  outline-color: #696cff;
+  color: #696cff;
+}
+.button.Secondary {
+  background-color: #8592a3;
+  outline-color: #8592a3;
+  color: #8592a3;
+}
+.button.Success {
+  background-color: #71dd37;
+  outline-color: #71dd37;
+  color: #71dd37;
+}
+.button.Danger {
+  background-color: #ff3e1d;
+  outline-color: #ff3e1d;
+  color: #ff3e1d;
+}
+.button.Warning {
+  background-color: #ffab00;
+  outline-color: #ffab00;
+  color: #ffab00;
+}
+.button.Info {
+  background-color: #03c3ec;
+  outline-color: #03c3ec;
+  color: #03c3ec;
+}
+.button.Dark {
+  background-color: #233446;
+  outline-color: #233446;
+  color: #233446;
+}
+
+.button.Small {
+  padding: 10px 20px;
+  outline-width: 3px;
+  font-size: 1rem;
+}
+.button.Medium {
+  padding: 20px 40px;
+  outline-width: 6px;
+  font-size: 2rem;
+}
+.button.Large {
+  padding: 30px 60px;
+  outline-width: 12px;
+  font-size: 3rem;
+}
+
+.button.OutLined {
+  background-color: initial;
+  outline-style: solid;
+}
+.button:not(.OutLined) {
+  color: white;
+}
+.button.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

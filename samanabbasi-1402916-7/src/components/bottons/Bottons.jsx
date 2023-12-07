@@ -22,7 +22,7 @@ const Bottons = ({
           target={target === null ? null : `_${target}`}
           className={`button ${looks} ${variants} ${size} ${
             className === null ? "" : className
-          } ${disabled === false ? "" : disabled}`}
+          } ${disabled === false ? "" : "disabled"}`}
           onClick={onClick}
         >
           {children}
@@ -36,7 +36,9 @@ const Bottons = ({
             className === null ? "" : className
           } ${disabled === false ? "" : "disabled"}`}
           onClick={onClick}
-        ></button>
+        >
+          {children}
+        </button>
       );
     }
   };
