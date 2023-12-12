@@ -1,11 +1,11 @@
 import React from "react";
 import "./AddNewInput.css";
 
-const AddNewInput = ({ handleInputValue, emptyValue, handleEmpptyValue }) => {
+const AddNewInput = ({ handleInputValue, emptyValue, handleEmptyValue }) => {
   const handleInput = (event) => {
     const inputValue = event.target.value;
     handleInputValue(inputValue);
-    handleEmpptyValue(false);
+    handleEmptyValue(false);
   };
   return (
     <div>

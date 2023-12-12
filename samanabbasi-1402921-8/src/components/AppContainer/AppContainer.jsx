@@ -12,10 +12,11 @@ const AppContainer = () => {
   const handleInputValue = (value) => {
     setInputValue(value);
   };
-  const handleEmpptyValue = (value) => {
+
+  const handleEmptyValue = (value) => {
     setEmptyValue(value);
   };
-  console.log(emptyValue);
+
   return (
     <div className="app-container">
       <Header />
@@ -23,11 +24,11 @@ const AppContainer = () => {
       <AddNewInput
         handleInputValue={handleInputValue}
         emptyValue={emptyValue}
-        handleEmpptyValue={handleEmpptyValue}
+        handleEmptyValue={handleEmptyValue}
       />
       <ActionsButtons
         InputValue={inputValue}
-        handleEmpptyValue={handleEmpptyValue}
+        handleEmptyValue={handleEmptyValue}
       />
     </div>
   );

@@ -1,17 +1,12 @@
-export function readJSON(key) {
-    const myTodos = localStorage.getItem(key);
-    if (myTodos === "") {
-        return myTodos;
+export const readJSON = (key) => {
+    const jsonData = localStorage.getItem(key);
+    if (jsonData) {
+        return JSON.parse(jsonData);
     }
-    else {
-        const parsedData = JSON.parse(myTodos)
-        return parsedData;
-    }
+    return null;
+};
 
-}
-
-
-export function writeJSON(key, data) {
-    localStorage.removeItem(key);
-    localStorage.setItem(key, data);
-}
+export const writeJSON = (key, data) => {
+    const jsonData = JSON.stringify(data);
+    localStorage.setItem(key, jsonData);
+};

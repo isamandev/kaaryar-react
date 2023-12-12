@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ApplyButton.css";
 import { writeJSON } from "../../utils/local-storage";
 
-const ApplyButton = ({ InputValue, handleEmpptyValue }) => {
+const ApplyButton = ({ InputValue, handleEmptyValue }) => {
+  const [newTodos, setNewTodos] = useState([]);
+
   const handleApply = () => {
     const newInput = InputValue;
-    writeJSON("Todos", newInput);
-    handleEmpptyValue(true);
+    const date = new Date();
+    const updatedTodos = [...newTodos, { id: date, task: newInput }];
+    setNewTodos(updatedTodos);
+    writeJSON("Todos", updatedTodos);
+    handleEmptyValue(true);
   };
+
   return (
     <>
       <button onClick={handleApply} className="apply-button button">
