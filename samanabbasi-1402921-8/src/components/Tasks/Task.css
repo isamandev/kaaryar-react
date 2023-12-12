@@ -1,0 +1,39 @@
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 8px;
+  padding-block: 12px;
+  min-height: 32px;
+  border-radius: 3px;
+  transition: all 0.2s ease-in;
+}
+.task-container:hover {
+  background-color: #f84546;
+  color: white;
+}
+.task-container .task-delete {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.task-container .task-delete:hover {
+  background-color: white;
+  color: #f84546;
+}
+.task-container .task-title {
+  width: 85%;
+  text-align: start;
+  direction: rtl;
+  font-size: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}

@@ -1,0 +1,7 @@
+.apply-button {
+  background-color: #f84546;
+  color: white;
+}
+.apply-button:hover {
+  box-shadow: 0px 4px 12px 0px #f84546;
+}
