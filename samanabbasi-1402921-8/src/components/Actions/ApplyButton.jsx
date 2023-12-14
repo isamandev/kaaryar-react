@@ -7,11 +7,15 @@ const ApplyButton = ({ InputValue, handleEmptyValue }) => {
 
   const handleApply = () => {
     const newInput = InputValue;
-    const date = new Date();
-    const updatedTodos = [...newTodos, { id: date, task: newInput }];
-    setNewTodos(updatedTodos);
-    writeJSON("Todos", updatedTodos);
-    handleEmptyValue(true);
+    if (newInput === "") {
+      alert("ورودی درستی وارد کنید");
+    } else {
+      const date = new Date();
+      const updatedTodos = [...newTodos, { id: date, task: newInput }];
+      setNewTodos(updatedTodos);
+      writeJSON("Todos", updatedTodos);
+      handleEmptyValue(true);
+    }
   };
 
   return (
