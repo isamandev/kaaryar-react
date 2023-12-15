@@ -14,7 +14,7 @@ const AddNewInput = ({ handleInputValue, emptyValue, handleEmptyValue }) => {
         type="text"
         className="add-input"
         placeholder="افزودن کار جدید"
-        value={emptyValue ? "" : null}
+        value={emptyValue ? "" : ""}
       />
     </div>
   );

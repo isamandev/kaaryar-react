@@ -10,7 +10,10 @@ const ApplyButton = ({ InputValue, handleEmptyValue, handelNewTodos }) => {
       alert("ورودی درستی وارد کنید");
     } else {
       const date = new Date();
-      const updatedTodos = [...newTodos, { id: date, task: newInput }];
+      const updatedTodos = [
+        ...newTodos,
+        { id: date.getTime(), task: newInput },
+      ];
       handelNewTodos(updatedTodos);
       writeJSON("Todos", updatedTodos);
       handleEmptyValue(true);

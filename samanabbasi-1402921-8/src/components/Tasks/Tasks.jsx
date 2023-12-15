@@ -3,12 +3,19 @@ import "./Tasks.css";
 import Task from "./Task";
 import { readJSON } from "../../utils/local-storage";
 
-const Tasks = () => {
-  const data = readJSON("Todos");
+const Tasks = ({ handelNewTodos }) => {
+  const data = readJSON("Todos") || [];
 
   const renderTasks = () => {
     if (data != null) {
-      return data.map((item) => <Task key={item.data} TaskTitle={item.task} />);
+      return data.map((item) => (
+        <Task
+          key={item.id}
+          taskId={item.id}
+          TaskTitle={item.task}
+          handelNewTodos={handelNewTodos}
+        />
+      ));
     }
     return null;
   };

@@ -28,7 +28,7 @@ const AppContainer = () => {
   return (
     <div className="app-container">
       <Header />
-      <Tasks />
+      <Tasks handelNewTodos={handelNewTodos} />
       <AddNewInput
         handleInputValue={handleInputValue}
         emptyValue={emptyValue}
