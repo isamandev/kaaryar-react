@@ -1,21 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ApplyButton.css";
 import { writeJSON } from "../../utils/local-storage";
-import { readJSON } from "../../utils/local-storage";
 
-const ApplyButton = ({ InputValue, handleEmptyValue }) => {
-  const initialTodos = readJSON("Todos");
-  const [newTodos, setNewTodos] = useState(
-    initialTodos === null ? [] : initialTodos
-  );
+const ApplyButton = ({ InputValue, handleEmptyValue, handelNewTodos }) => {
   const handleApply = () => {
     const newInput = InputValue;
+    const newTodos = handelNewTodos() === null ? [] : handelNewTodos();
     if (newInput === "") {
       alert("ورودی درستی وارد کنید");
     } else {
       const date = new Date();
       const updatedTodos = [...newTodos, { id: date, task: newInput }];
-      setNewTodos(updatedTodos);
+      handelNewTodos(updatedTodos);
       writeJSON("Todos", updatedTodos);
       handleEmptyValue(true);
     }

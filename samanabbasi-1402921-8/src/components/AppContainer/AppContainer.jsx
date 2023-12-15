@@ -4,11 +4,15 @@ import Header from "../Header/Header";
 import Tasks from "../Tasks/Tasks";
 import ActionsButtons from "../Actions/ActionsButtons";
 import AddNewInput from "../addNewInput/AddNewInput";
+import { readJSON } from "../../utils/local-storage";
 
 const AppContainer = () => {
   const [inputValue, setInputValue] = useState("");
   const [emptyValue, setEmptyValue] = useState(false);
-  const [removeFlag, setRemoveFleg] = useState(false);
+  const initialTodos = readJSON("Todos");
+  const [newTodos, setNewTodos] = useState(
+    initialTodos === null ? [] : initialTodos
+  );
   const handleInputValue = (value) => {
     setInputValue(value);
   };
@@ -16,8 +20,9 @@ const AppContainer = () => {
   const handleEmptyValue = (value) => {
     setEmptyValue(value);
   };
-  const handleRemoveAllBtn = (value) => {
-    setRemoveFleg(value);
+  const handelNewTodos = (value) => {
+    setNewTodos(value);
+    return newTodos;
   };
 
   return (
@@ -32,8 +37,7 @@ const AppContainer = () => {
       <ActionsButtons
         InputValue={inputValue}
         handleEmptyValue={handleEmptyValue}
-        handleRemoveAllBtn={handleRemoveAllBtn}
-        check={removeFlag}
+        handelNewTodos={handelNewTodos}
       />
     </div>
   );

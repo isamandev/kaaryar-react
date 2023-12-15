@@ -5,8 +5,7 @@ const ActionsButtons = ({
   handleInputValue,
   InputValue,
   handleEmptyValue,
-  handleRemoveAllBtn,
-  check,
+  handelNewTodos,
 }) => {
   return (
     <div className="actions-buttons-container">
@@ -14,10 +13,9 @@ const ActionsButtons = ({
         handleInputValue={handleInputValue}
         InputValue={InputValue}
         handleEmptyValue={handleEmptyValue}
-        handleRemoveAllBtn={handleRemoveAllBtn}
-        check={check}
+        handelNewTodos={handelNewTodos}
       />
-      <CancellButton handleRemoveAllBtn={handleRemoveAllBtn} />
+      <CancellButton handelNewTodos={handelNewTodos} />
     </div>
   );
 };

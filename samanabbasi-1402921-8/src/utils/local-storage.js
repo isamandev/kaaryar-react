@@ -3,7 +3,10 @@ export const readJSON = (key) => {
     if (jsonData) {
         return JSON.parse(jsonData);
     }
-    return null;
+    else {
+        localStorage.setItem(key, "");
+        return null;
+    }
 };
 
 export const writeJSON = (key, data) => {

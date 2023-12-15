@@ -1,12 +1,10 @@
 import React from "react";
 import "./CancellButton.css";
 
-const CancellButton = ({ handleRemoveAllBtn }) => {
-  let flag = false;
+const CancellButton = ({ handelNewTodos }) => {
   const DeleteAllList = () => {
-    localStorage.removeItem("Todos");
-    handleRemoveAllBtn(!flag);
-    flag = !flag;
+    localStorage.clear("Todos");
+    handelNewTodos(null);
   };
   return (
     <>
