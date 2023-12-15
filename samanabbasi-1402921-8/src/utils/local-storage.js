@@ -8,5 +8,6 @@ export const readJSON = (key) => {
 
 export const writeJSON = (key, data) => {
     const jsonData = JSON.stringify(data);
+    localStorage.removeItem(key);
     localStorage.setItem(key, jsonData);
 };

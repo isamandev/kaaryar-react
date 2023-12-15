@@ -5,14 +5,15 @@ import { readJSON } from "../../utils/local-storage";
 
 const Tasks = () => {
   const data = readJSON("Todos");
-  console.log(data);
-  return (
-    <div className="tasks-container">
-      {data.map((item) => (
-        <Task key={item.data} TaskTitle={item.task} />
-      ))}
-    </div>
-  );
+
+  const renderTasks = () => {
+    if (data != null) {
+      return data.map((item) => <Task key={item.data} TaskTitle={item.task} />);
+    }
+    return null;
+  };
+
+  return <div className="tasks-container">{renderTasks()}</div>;
 };
 
 export default Tasks;

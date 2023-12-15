@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "./ApplyButton.css";
 import { writeJSON } from "../../utils/local-storage";
+import { readJSON } from "../../utils/local-storage";
 
 const ApplyButton = ({ InputValue, handleEmptyValue }) => {
-  const [newTodos, setNewTodos] = useState([]);
-
+  const initialTodos = readJSON("Todos");
+  const [newTodos, setNewTodos] = useState(
+    initialTodos === null ? [] : initialTodos
+  );
   const handleApply = () => {
     const newInput = InputValue;
     if (newInput === "") {
