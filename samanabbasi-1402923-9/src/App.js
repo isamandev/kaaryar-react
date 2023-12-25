@@ -1,9 +1,9 @@
 import './App.css';
-import AppContainer from './components/AppContainer/AppContainer';
+import DisplayForm from './components/displayForm/DisplayForm';
 function App() {
   return (
     <div className="App">
-      <AppContainer />
+      <DisplayForm />
     </div>
   );
 }

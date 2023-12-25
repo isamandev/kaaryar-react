@@ -1,0 +1,29 @@
+input,
+label {
+  display: block;
+}
+.genders input,
+.genders label,
+.skills input,
+.skills label {
+  display: inline;
+}
+.genders input,
+.skills input {
+  margin-inline: 10px;
+}
+
+.skills {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+span {
+  color: red;
+  display: none;
+}
+.invalid {
+  display: block;
+}

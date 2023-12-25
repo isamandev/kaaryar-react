@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "value": "HTML"
+  },
+  {
+    "id": 2,
+    "value": "CSS"
+  },
+  {
+    "id": 3,
+    "value": "JavaScript"
+  },
+  {
+    "id": 4,
+    "value": "React"
+  },
+  {
+    "id": 5,
+    "value": "FrontEnd"
+  },
+  {
+    "id": 6,
+    "value": "BackEnd"
+  },
+  {
+    "id": 7,
+    "value": "Vue"
+  },
+  {
+    "id": 8,
+    "value": "Angular"
+  },
+  {
+    "id": 9,
+    "value": "Django"
+  },
+  {
+    "id": 10,
+    "value": "Next JS"
+  },
+  {
+    "id": 11,
+    "value": "Nuxt JS"
+  }
+]
